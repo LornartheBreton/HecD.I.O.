@@ -14,6 +14,10 @@ import { TrddPage } from '../trdd/trdd';
 import { TrdbPage } from '../trdb/trdb';
 import { TrwallPage } from '../trwall/trwall';
 import { TrmjPage } from '../trmj/trmj';
+import { RevddPage } from '../revdd/revdd';
+import { RevdbPage } from '../revdb/revdb';
+import { RevmjPage } from '../revmj/revmj';
+import { RevwallPage } from '../revwall/revwall';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -32,6 +36,10 @@ export class HomePage {
   trdd=TrddPage;
   trwall=TrwallPage;
   trmj=TrmjPage;
+  revdd=RevddPage;
+  revdb=RevdbPage;
+  revmj=RevmjPage;
+  revwall=RevwallPage;
   constructor(public navCtrl: NavController) {
 
   }
@@ -76,6 +84,18 @@ export class HomePage {
       break;
       case 13:
         this.navCtrl.push(this.trmj);
+      break;
+      case 14:
+        this.navCtrl.push(this.revdd);
+      break;
+      case 15:
+        this.navCtrl.push(this.revdb);
+      break;
+      case 16:
+        this.navCtrl.push(this.revmj);
+      break;
+      case 17:
+        this.navCtrl.push(this.revwall);
       break;
     }
   }

@@ -19,6 +19,10 @@ import { TrddPage } from '../pages/trdd/trdd';
 import { TrdbPage } from '../pages/trdb/trdb';
 import { TrwallPage } from '../pages/trwall/trwall';
 import { TrmjPage } from '../pages/trmj/trmj';
+import { RevddPage } from '../pages/revdd/revdd';
+import { RevdbPage } from '../pages/revdb/revdb';
+import { RevmjPage } from '../pages/revmj/revmj';
+import { RevwallPage } from '../pages/revwall/revwall';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { TrmjPage } from '../pages/trmj/trmj';
     TrdbPage,
     TrddPage,
     TrwallPage,
-    TrmjPage
+    TrmjPage,
+    RevddPage,
+    RevdbPage,
+    RevwallPage,
+    RevmjPage
 
   ],
   imports: [
@@ -59,7 +67,11 @@ import { TrmjPage } from '../pages/trmj/trmj';
     TrdbPage,
     TrddPage,
     TrwallPage,
-    TrmjPage
+    TrmjPage,
+    RevddPage,
+    RevdbPage,
+    RevwallPage,
+    RevmjPage
   ],
   providers: [
     StatusBar,
