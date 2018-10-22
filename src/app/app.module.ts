@@ -11,7 +11,10 @@ import { DbPage } from '../pages/db/db';
 import { HumanzPage } from '../pages/humanz/humanz';
 import { MjPage } from '../pages/mj/mj';
 import { WallPage } from '../pages/wall/wall';
-
+import { GorillazPage } from '../pages/gorillaz/gorillaz';
+import { BowiePage } from '../pages/bowie/bowie';
+import { FloydPage } from '../pages/floyd/floyd';
+import { MichaelPage } from '../pages/michael/michael';
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +23,12 @@ import { WallPage } from '../pages/wall/wall';
     DbPage,
     HumanzPage,
     MjPage,
-    WallPage
+    WallPage,
+    GorillazPage,
+    MichaelPage,
+    FloydPage,
+    BowiePage
+
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,11 @@ import { WallPage } from '../pages/wall/wall';
     DbPage,
     HumanzPage,
     MjPage,
-    WallPage
+    WallPage,
+    GorillazPage,
+    MichaelPage,
+    FloydPage,
+    BowiePage
   ],
   providers: [
     StatusBar,
