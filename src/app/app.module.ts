@@ -15,6 +15,11 @@ import { GorillazPage } from '../pages/gorillaz/gorillaz';
 import { BowiePage } from '../pages/bowie/bowie';
 import { FloydPage } from '../pages/floyd/floyd';
 import { MichaelPage } from '../pages/michael/michael';
+import { TrddPage } from '../pages/trdd/trdd';
+import { TrdbPage } from '../pages/trdb/trdb';
+import { TrwallPage } from '../pages/trwall/trwall';
+import { TrmjPage } from '../pages/trmj/trmj';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +32,11 @@ import { MichaelPage } from '../pages/michael/michael';
     GorillazPage,
     MichaelPage,
     FloydPage,
-    BowiePage
+    BowiePage,
+    TrdbPage,
+    TrddPage,
+    TrwallPage,
+    TrmjPage
 
   ],
   imports: [
@@ -46,7 +55,11 @@ import { MichaelPage } from '../pages/michael/michael';
     GorillazPage,
     MichaelPage,
     FloydPage,
-    BowiePage
+    BowiePage,
+    TrdbPage,
+    TrddPage,
+    TrwallPage,
+    TrmjPage
   ],
   providers: [
     StatusBar,

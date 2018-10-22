@@ -10,6 +10,10 @@ import { GorillazPage } from '../gorillaz/gorillaz';
 import { BowiePage } from '../bowie/bowie';
 import { FloydPage } from '../floyd/floyd';
 import { MichaelPage } from '../michael/michael';
+import { TrddPage } from '../trdd/trdd';
+import { TrdbPage } from '../trdb/trdb';
+import { TrwallPage } from '../trwall/trwall';
+import { TrmjPage } from '../trmj/trmj';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -24,6 +28,10 @@ export class HomePage {
   gorillaz=GorillazPage;
   bowie=BowiePage;
   floyd=FloydPage;
+  trdb=TrdbPage;
+  trdd=TrddPage;
+  trwall=TrwallPage;
+  trmj=TrmjPage;
   constructor(public navCtrl: NavController) {
 
   }
@@ -56,6 +64,18 @@ export class HomePage {
       break;
       case 9:
         this.navCtrl.push(this.mike);
+      break;
+      case 10:
+        this.navCtrl.push(this.trdd);
+      break;
+      case 11:
+        this.navCtrl.push(this.trdb);
+      break;
+      case 12:
+        this.navCtrl.push(this.trwall);
+      break;
+      case 13:
+        this.navCtrl.push(this.trmj);
       break;
     }
   }
