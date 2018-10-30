@@ -23,6 +23,7 @@ import { RevddPage } from '../pages/revdd/revdd';
 import { RevdbPage } from '../pages/revdb/revdb';
 import { RevmjPage } from '../pages/revmj/revmj';
 import { RevwallPage } from '../pages/revwall/revwall';
+import { CaratulaPage } from '../pages/caratula/caratula';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { RevwallPage } from '../pages/revwall/revwall';
     RevddPage,
     RevdbPage,
     RevwallPage,
-    RevmjPage
+    RevmjPage,
+    CaratulaPage
 
   ],
   imports: [
@@ -71,7 +73,8 @@ import { RevwallPage } from '../pages/revwall/revwall';
     RevddPage,
     RevdbPage,
     RevwallPage,
-    RevmjPage
+    RevmjPage,
+    CaratulaPage
   ],
   providers: [
     StatusBar,

@@ -8,30 +8,32 @@
 
 <ion-content padding style="background-color: rgb(243,223,162)">
 
-  <ion-card style="background-color: rgb(239,230,221)">
+  <ion-card style="border-radius: 5px"
+  *ngFor="let disco of discos">
 
-
+  <ion-item [ngStyle]="{'background-color':disco.color}">
 
   <ion-card-content>
     <ion-row>
     <ion-col>
-    <img (click)="switchPage(1)"
-    src="../assets/imgs/Gorillazdemondays.jpg" >
+    <img (click)="clickCover()"
+    src={{disco.imagen}} >
     </ion-col>
     <ion-col>
       <h2 (click)="switchPage(10)"  >
-        Demon Days
+        {{disco.album}}
       </h2 >
-    <h3 (click)="switchPage(6)">Gorillaz</h3>
-    <h4>2005</h4>
+    <h3 (click)="switchPage(6)">{{disco.artista}}</h3>
+    <h4>{{disco.anio}}</h4>
     <img (click)="switchPage(14)" src="../assets/imgs/5.png">
   </ion-col>
     </ion-row>
   </ion-card-content>
+  </ion-item>
 
   </ion-card>
 
-<ion-card style="background-color: rgb(239,230,221)">
+<!-- <ion-card style="background-color: rgb(239,230,221)">
 
 
 
@@ -95,5 +97,5 @@
   </ion-col>
     </ion-row>
   </ion-card-content>
-  </ion-card>
+  </ion-card> -->
 </ion-content>
