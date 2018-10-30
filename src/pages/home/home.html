@@ -8,7 +8,7 @@
 
 <ion-content padding style="background-color: rgb(243,223,162)">
 
-  <ion-card style="border-radius: 5px"
+  <ion-card style="border-radius: 10px"
   *ngFor="let disco of discos">
 
   <ion-item [ngStyle]="{'background-color':disco.color}">
@@ -16,7 +16,7 @@
   <ion-card-content>
     <ion-row>
     <ion-col>
-    <img (click)="clickCover()"
+    <img (click)="clickCover(disco.id)"
     src={{disco.imagen}} >
     </ion-col>
     <ion-col>

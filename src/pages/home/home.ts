@@ -153,8 +153,9 @@ export class HomePage {
   //     break;
   //   }
   // }
-  clickCover(){
-    this.navCtrl.push(this.cover);
+  clickCover(id: number){
+    this.navCtrl.push(this.cover,this.discos[id]);
+    console.log(id);
   }
 
 }
