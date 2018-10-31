@@ -40,6 +40,44 @@ export class HomePage {
   revdb=RevdbPage;
   revmj=RevmjPage;
   revwall=RevwallPage;
+  discos=[
+    {
+      artista: "Gorillaz",
+      album: "Demon Days",
+      anio: "2005",
+      valoracion: [1,2,3,4,5],
+      imagen: "../assets/imgs/Gorillazdemondays.jpg"
+    },
+    {
+      artista: "David Bowie",
+      album: "Ziggy Stardust",
+      anio: "1972",
+      valoracion: [1,2,3,4,5],
+      imagen: "../assets/imgs/Bowie.jpg"
+    },
+    {
+      artista: "Pink Floyd",
+      album: "The Wall",
+      anio: "1979",
+      valoracion: [1,2,3,4,5],
+      imagen: "../assets/imgs/Wall.jpg"
+    },
+    {
+      artista: "Gorillaz",
+      album: "Humanz",
+      anio: "2017",
+      valoracion: [1,2,3,4,5],
+      imagen: "../assets/imgs/Humanz.jpg"
+    },
+    {
+      artista: "Michael Jackson",
+      album: "Thriller",
+      anio: "1982",
+      valoracion: [1,2,3,4,5],
+      imagen: "../assets/imgs/MJ.jpg"
+    },
+  ];
+
   constructor(public navCtrl: NavController) {
 
   }
