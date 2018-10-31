@@ -18,6 +18,7 @@ import { RevddPage } from '../revdd/revdd';
 import { RevdbPage } from '../revdb/revdb';
 import { RevmjPage } from '../revmj/revmj';
 import { RevwallPage } from '../revwall/revwall';
+import { CaratulaPage } from '../caratula/caratula';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -46,96 +47,137 @@ export class HomePage {
       album: "Demon Days",
       anio: "2005",
       valoracion: [1,2,3,4,5],
+<<<<<<< HEAD
       imagen: "../assets/imgs/Gorillazdemondays.jpg"
+=======
+      imagen: "../assets/imgs/Gorillazdemondays.jpg",
+      color: "#AAAAA",
+      id: 0
+>>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
     },
     {
       artista: "David Bowie",
       album: "Ziggy Stardust",
       anio: "1972",
       valoracion: [1,2,3,4,5],
+<<<<<<< HEAD
       imagen: "../assets/imgs/Bowie.jpg"
+=======
+      imagen: "../assets/imgs/Bowie.jpg",
+      color: "#EB5160",
+      id:1
+>>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
     },
     {
       artista: "Pink Floyd",
       album: "The Wall",
       anio: "1979",
       valoracion: [1,2,3,4,5],
+<<<<<<< HEAD
       imagen: "../assets/imgs/Wall.jpg"
+=======
+      imagen: "../assets/imgs/Wall.jpg",
+      color: "#B7999C",
+      id: 2
+>>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
     },
     {
       artista: "Gorillaz",
       album: "Humanz",
       anio: "2017",
       valoracion: [1,2,3,4,5],
+<<<<<<< HEAD
       imagen: "../assets/imgs/Humanz.jpg"
+=======
+      imagen: "../assets/imgs/Humanz.jpg",
+      color: "#AAAAA",
+      id: 3
+>>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
     },
     {
       artista: "Michael Jackson",
       album: "Thriller",
       anio: "1982",
       valoracion: [1,2,3,4,5],
+<<<<<<< HEAD
       imagen: "../assets/imgs/MJ.jpg"
     },
   ];
+=======
+      imagen: "../assets/imgs/MJ.jpg",
+      color: "#DFE0E5",
+      id: 4
+    },
+  ];
+  
+  cover=CaratulaPage;
+
+  
+
+>>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
 
   constructor(public navCtrl: NavController) {
 
   }
 
-  switchPage(page:number){
-    switch(page){
-      case 1:
-        this.navCtrl.push(this.dd);
-      break;
-      case 2:
-        this.navCtrl.push(this.db);
-      break;
-      case 3:
-        this.navCtrl.push(this.humanz);
-      break;
-      case 4:
-        this.navCtrl.push(this.mj);
-      break;
-      case 5:
-        this.navCtrl.push(this.wall);
-      break;
-      case 6:
-        this.navCtrl.push(this.gorillaz);
-      break;
-      case 7:
-        this.navCtrl.push(this.bowie);
-      break;
-      case 8:
-        this.navCtrl.push(this.floyd);
-      break;
-      case 9:
-        this.navCtrl.push(this.mike);
-      break;
-      case 10:
-        this.navCtrl.push(this.trdd);
-      break;
-      case 11:
-        this.navCtrl.push(this.trdb);
-      break;
-      case 12:
-        this.navCtrl.push(this.trwall);
-      break;
-      case 13:
-        this.navCtrl.push(this.trmj);
-      break;
-      case 14:
-        this.navCtrl.push(this.revdd);
-      break;
-      case 15:
-        this.navCtrl.push(this.revdb);
-      break;
-      case 16:
-        this.navCtrl.push(this.revmj);
-      break;
-      case 17:
-        this.navCtrl.push(this.revwall);
-      break;
-    }
+  // switchPage(page:number){
+  //   switch(page){
+  //     case 1:
+  //       this.navCtrl.push(this.dd);
+  //     break;
+  //     case 2:
+  //       this.navCtrl.push(this.db);
+  //     break;
+  //     case 3:
+  //       this.navCtrl.push(this.humanz);
+  //     break;
+  //     case 4:
+  //       this.navCtrl.push(this.mj);
+  //     break;
+  //     case 5:
+  //       this.navCtrl.push(this.wall);
+  //     break;
+  //     case 6:
+  //       this.navCtrl.push(this.gorillaz);
+  //     break;
+  //     case 7:
+  //       this.navCtrl.push(this.bowie);
+  //     break;
+  //     case 8:
+  //       this.navCtrl.push(this.floyd);
+  //     break;
+  //     case 9:
+  //       this.navCtrl.push(this.mike);
+  //     break;
+  //     case 10:
+  //       this.navCtrl.push(this.trdd);
+  //     break;
+  //     case 11:
+  //       this.navCtrl.push(this.trdb);
+  //     break;
+  //     case 12:
+  //       this.navCtrl.push(this.trwall);
+  //     break;
+  //     case 13:
+  //       this.navCtrl.push(this.trmj);
+  //     break;
+  //     case 14:
+  //       this.navCtrl.push(this.revdd);
+  //     break;
+  //     case 15:
+  //       this.navCtrl.push(this.revdb);
+  //     break;
+  //     case 16:
+  //       this.navCtrl.push(this.revmj);
+  //     break;
+  //     case 17:
+  //       this.navCtrl.push(this.revwall);
+  //     break;
+  //   }
+  // }
+  clickCover(id: number){
+    this.navCtrl.push(this.cover,this.discos[id]);
+    console.log(id);
   }
 
 }
