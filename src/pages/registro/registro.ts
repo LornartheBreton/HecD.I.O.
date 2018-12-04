@@ -19,7 +19,7 @@ export class RegistroPage {
   correo = '';
   contra = '';
   telefono='';
-  carito='';
+  carrito='';
   usuarios = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
@@ -34,8 +34,11 @@ export class RegistroPage {
     console.log(this.correo);
     console.log(this.contra);
     this.usuarios.push({
+      nombre: this.nombre,
       correo: this.correo,
-      contra: this.contra
+      contra: this.contra,
+      telefono: this.telefono,
+      carrito: this.carrito
     });
     // modicar la llave para tener diferentes usuarios
     this.storage.set('usuarios', JSON.stringify(this.usuarios));

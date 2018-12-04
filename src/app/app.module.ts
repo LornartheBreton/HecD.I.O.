@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { BrowsePage } from '../pages/browse/browse';
 import {RegistroPage} from "../pages/registro/registro";
 import {IonicStorageModule} from "@ionic/storage";
 
@@ -13,7 +14,8 @@ import {IonicStorageModule} from "@ionic/storage";
   declarations: [
     MyApp,
     HomePage,
-    RegistroPage
+    RegistroPage,
+    BrowsePage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import {IonicStorageModule} from "@ionic/storage";
   entryComponents: [
     MyApp,
     HomePage,
-    RegistroPage
+    RegistroPage,
+    BrowsePage
   ],
   providers: [
     StatusBar,
