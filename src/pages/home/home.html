@@ -1,114 +1,32 @@
-<ion-header  >
+<ion-header>
   <ion-navbar>
-    <ion-title  style="background-color: rgb(187,68,48)" >
-      Mis Discos
+    <ion-title>
+      Iniciar Sesión
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding style="background-color: rgb(243,223,162)">
+<ion-content padding>
+  <ion-list>
 
-<<<<<<< HEAD
-  <ion-card style="background-color: rgb(239,230,221)" 
-  *ngFor="let disco of discos">
-=======
-  <ion-card style="border-radius: 10px"
-  *ngFor="let disco of discos">
+    <ion-item>
+      <ion-input [(ngModel)]="correo" placeholder="Correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="contra" placeholder="Contraseña"></ion-input>
+    </ion-item>
+  </ion-list>
 
-  <ion-item [ngStyle]="{'background-color':disco.color}">
->>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
+  <button ion-button block (click)="clickSesion()">Iniciar Sesión</button>
+  <button ion-button block (click)="clickRegistro()">Registrarse</button>
 
-  <ion-card-content>
-    <ion-row>
-    <ion-col>
-<<<<<<< HEAD
-    <img (click)="switchPage(1)"
-=======
-    <img (click)="clickCover(disco.id)"
->>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
-    src={{disco.imagen}} >
-    </ion-col>
-    <ion-col>
-      <h2 (click)="switchPage(10)"  >
-        {{disco.album}}
-      </h2 >
-    <h3 (click)="switchPage(6)">{{disco.artista}}</h3>
-    <h4>{{disco.anio}}</h4>
-    <img (click)="switchPage(14)" src="../assets/imgs/5.png">
-  </ion-col>
-    </ion-row>
-  </ion-card-content>
-  </ion-item>
+  <!-- <ion-list>
+    <ion-item *ngFor="let u of usuarios">
+      <ion-card>
+        {{u.correo}}
+        {{u.contra}}
+      </ion-card>
+    </ion-item>
+  </ion-list> -->
 
-  </ion-card>
-
-<<<<<<< HEAD
-
-=======
-<!-- <ion-card style="background-color: rgb(239,230,221)">
-
-
-
-<ion-card-content>
-  <ion-row>
-  <ion-col>
-  <img (click)="switchPage(2)"
-  src="../assets/imgs/Bowie.jpg" >
-  </ion-col>
-  <ion-col>
-    <h2 (click)="switchPage(11)"  >
-      Ziggy Stardust
-    </h2 >
-  <h3 (click)="switchPage(7)">David Bowie</h3>
-  <h4>1972</h4>
-  <img (click)="switchPage(15)" src="../assets/imgs/5.png">
-</ion-col>
-  </ion-row>
-</ion-card-content>
-
-</ion-card>
-
-  <ion-card style="background-color: rgb(239,230,221)">
-
-  <ion-card-content>
-    <ion-row>
-    <ion-col>
-    <img (click)="switchPage(5)"
-    src="../assets/imgs/Wall.jpg" >
-    </ion-col>
-    <ion-col>
-      <h2 (click)="switchPage(12)"  >
-        The Wall
-      </h2 >
-    <h3 (click)="switchPage(8)">Pink Floyd</h3>
-    <h4>1979</h4>
-    <img (click)="switchPage(17)" src="../assets/imgs/5.png">
-  </ion-col>
-    </ion-row>
-  </ion-card-content>
-
-  </ion-card>
-
-
-  <ion-card style="background-color: rgb(239,230,221)">
-
-
-  <ion-card-content>
-    <ion-row>
-    <ion-col>
-    <img (click)="switchPage(4)"
-    src="../assets/imgs/MJ.jpg" >
-    </ion-col>
-    <ion-col>
-      <h2 (click)="switchPage(13)"  >
-        Thriller
-      </h2 >
-    <h3 (click)="switchPage(9)">Mihael Jackson</h3>
-    <h4>1982</h4>
-    <img (click)="switchPage(16)" src="../assets/imgs/5.png">
-  </ion-col>
-    </ion-row>
-  </ion-card-content>
-  </ion-card> -->
->>>>>>> 48802636a2dd1e1a53d4fca8a6426194596cded5
 </ion-content>

@@ -6,75 +6,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { DdPage } from '../pages/dd/dd';
-import { DbPage } from '../pages/db/db';
-import { HumanzPage } from '../pages/humanz/humanz';
-import { MjPage } from '../pages/mj/mj';
-import { WallPage } from '../pages/wall/wall';
-import { GorillazPage } from '../pages/gorillaz/gorillaz';
-import { BowiePage } from '../pages/bowie/bowie';
-import { FloydPage } from '../pages/floyd/floyd';
-import { MichaelPage } from '../pages/michael/michael';
-import { TrddPage } from '../pages/trdd/trdd';
-import { TrdbPage } from '../pages/trdb/trdb';
-import { TrwallPage } from '../pages/trwall/trwall';
-import { TrmjPage } from '../pages/trmj/trmj';
-import { RevddPage } from '../pages/revdd/revdd';
-import { RevdbPage } from '../pages/revdb/revdb';
-import { RevmjPage } from '../pages/revmj/revmj';
-import { RevwallPage } from '../pages/revwall/revwall';
-import { CaratulaPage } from '../pages/caratula/caratula';
+import {RegistroPage} from "../pages/registro/registro";
+import {IonicStorageModule} from "@ionic/storage";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    DdPage,
-    DbPage,
-    HumanzPage,
-    MjPage,
-    WallPage,
-    GorillazPage,
-    MichaelPage,
-    FloydPage,
-    BowiePage,
-    TrdbPage,
-    TrddPage,
-    TrwallPage,
-    TrmjPage,
-    RevddPage,
-    RevdbPage,
-    RevwallPage,
-    RevmjPage,
-    CaratulaPage
-
+    RegistroPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    DdPage,
-    DbPage,
-    HumanzPage,
-    MjPage,
-    WallPage,
-    GorillazPage,
-    MichaelPage,
-    FloydPage,
-    BowiePage,
-    TrdbPage,
-    TrddPage,
-    TrwallPage,
-    TrmjPage,
-    RevddPage,
-    RevdbPage,
-    RevwallPage,
-    RevmjPage,
-    CaratulaPage
+    RegistroPage
   ],
   providers: [
     StatusBar,
