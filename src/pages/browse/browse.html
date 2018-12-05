@@ -14,5 +14,21 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-card *ngFor="let p of productos">
+      <img src={{p.foto}}>
+      <ion-card-content>
+        <ion-card-title>
+          {{p.nombre}}
+        </ion-card-title>
+        <h2>
+          $ {{p.precio}}
+        </h2>
+        <p>
+          {{p.nombreVendedor}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
 </ion-content>

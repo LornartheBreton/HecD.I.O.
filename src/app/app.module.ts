@@ -9,13 +9,14 @@ import { HomePage } from '../pages/home/home';
 import { BrowsePage } from '../pages/browse/browse';
 import {RegistroPage} from "../pages/registro/registro";
 import {IonicStorageModule} from "@ionic/storage";
-
+import { ProductPage } from "../pages/product/product"
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegistroPage,
-    BrowsePage
+    BrowsePage,
+    ProductPage
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import {IonicStorageModule} from "@ionic/storage";
     MyApp,
     HomePage,
     RegistroPage,
-    BrowsePage
+    BrowsePage,
+    ProductPage
   ],
   providers: [
     StatusBar,
