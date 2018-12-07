@@ -7,12 +7,49 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>product</ion-title>
+    <ion-title>{{nombre}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+    <img src={{foto}}/>
+    <ion-card-content>
 
+     <ion-row>
+       <ion-col>
+         <h2>
+         {{vendedorNombre}}
+        </h2>
+       </ion-col>
+       <ion-col>
+        <ion-icon name="star" *ngIf="vendedorVal > 0"></ion-icon>
+        <ion-icon name="star" *ngIf="vendedorVal > 1"></ion-icon>
+        <ion-icon name="star" *ngIf="vendedorVal > 2"></ion-icon>
+        <ion-icon name="star" *ngIf="vendedorVal > 3"></ion-icon>
+        <ion-icon name="star" *ngIf="vendedorVal > 4"></ion-icon>
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col>
+         Disponibles:
+       </ion-col>
+       <ion-col>
+         {{available}}
+       </ion-col>
+     </ion-row>
+
+     <ion-row>
+       <ion-col>
+         Lanzamiento:
+       </ion-col>
+       <ion-col>
+         {{fecha}}
+       </ion-col>
+     </ion-row>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

@@ -14,8 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'product.html',
 })
 export class ProductPage {
-
+  s=0;
+  nombre: string;
+  foto: string;
+  vendedorNombre: string;
+  vendedorVal: number;
+  available: number;
+  fecha:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.nombre=this.navParams.get("nombre");
+    this.foto=this.navParams.get("foto");
+    this.vendedorNombre=this.navParams.get("nombreVendedor");
+    this.vendedorVal=this.navParams.get("valVendedor");
+    this.available=this.navParams.get("disponibles");
+    this.fecha=this.navParams.get("fecha");
   }
 
   ionViewDidLoad() {

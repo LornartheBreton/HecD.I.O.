@@ -16,7 +16,7 @@
 <ion-content padding>
   <ion-list>
     <ion-card *ngFor="let p of productos">
-      <img src={{p.foto}}>
+      <img src={{p.foto}} (click)="viewProduct(p)">
       <ion-card-content>
         <ion-card-title>
           {{p.nombre}}
