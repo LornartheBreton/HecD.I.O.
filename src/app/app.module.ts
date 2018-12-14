@@ -10,13 +10,15 @@ import { BrowsePage } from '../pages/browse/browse';
 import {RegistroPage} from "../pages/registro/registro";
 import {IonicStorageModule} from "@ionic/storage";
 import { ProductPage } from "../pages/product/product"
+import { CartPage } from "../pages/cart/cart";
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     RegistroPage,
     BrowsePage,
-    ProductPage
+    ProductPage,
+    CartPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ProductPage } from "../pages/product/product"
     HomePage,
     RegistroPage,
     BrowsePage,
-    ProductPage
+    ProductPage,
+    CartPage
   ],
   providers: [
     StatusBar,

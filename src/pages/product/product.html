@@ -7,29 +7,29 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{nombre}}</ion-title>
+    <ion-title style="background-color: rgb(255, 169,135)">{{product.nombre}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
-    <img src={{foto}}/>
+<ion-content padding style="background-color: rgb(247, 235,232)">
+  <ion-card style="background-color: rgb(233, 107,107)">
+    <img src={{product.foto}}/>
     <ion-card-content>
 
      <ion-row>
        <ion-col>
          <h2>
-         {{vendedorNombre}}
+         {{product.nombreVendedor}}
         </h2>
        </ion-col>
        <ion-col>
-        <ion-icon name="star" *ngIf="vendedorVal > 0"></ion-icon>
-        <ion-icon name="star" *ngIf="vendedorVal > 1"></ion-icon>
-        <ion-icon name="star" *ngIf="vendedorVal > 2"></ion-icon>
-        <ion-icon name="star" *ngIf="vendedorVal > 3"></ion-icon>
-        <ion-icon name="star" *ngIf="vendedorVal > 4"></ion-icon>
+        <ion-icon name="star" *ngIf="product.valVendedor > 0"></ion-icon>
+        <ion-icon name="star" *ngIf="product.valVendedor > 1"></ion-icon>
+        <ion-icon name="star" *ngIf="product.valVendedor > 2"></ion-icon>
+        <ion-icon name="star" *ngIf="product.valVendedor > 3"></ion-icon>
+        <ion-icon name="star" *ngIf="product.valVendedor > 4"></ion-icon>
        </ion-col>
      </ion-row>
 
@@ -38,7 +38,7 @@
          Disponibles:
        </ion-col>
        <ion-col>
-         {{available}}
+         {{product.disponibles}}
        </ion-col>
      </ion-row>
 
@@ -47,9 +47,35 @@
          Lanzamiento:
        </ion-col>
        <ion-col>
-         {{fecha}}
+         {{product.fecha}}
        </ion-col>
      </ion-row>
+
+     <ion-row>
+       <button ion-button full (click)="addCart()">
+         Agregar al carrito
+       </button>
+     </ion-row>
+
+     <ion-row>
+        <ion-list>
+          <ion-item *ngFor="let r of product.reviews" style="background-color: rgb(233, 107,107)">
+            <ion-avatar>
+              <img src={{r.avatar}}>
+            </ion-avatar>
+            <h2>
+              {{r.review}}
+            </h2>
+            <h3>
+              {{r.user}}
+            </h3>
+            <p>
+              {{r.fecha}}
+            </p>
+          </ion-item>
+        </ion-list>
+     </ion-row>
+
     </ion-card-content>
   </ion-card>
 </ion-content>

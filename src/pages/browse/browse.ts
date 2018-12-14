@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductPage } from '../product/product';
-
+import { CartPage } from '../cart/cart';
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the BrowsePage page.
  *
@@ -397,15 +398,33 @@ export class BrowsePage {
       fecha: "06-03-2017",
       disponibles: Math.floor(Math.random() * 100) + 1},
   ];
-  nombre:"";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.nombre=this.navParams.get("nombre");
+  //nombre:"";
+  usuarios=[];
+  userIndex:number;
+  cart=CartPage;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public storage: Storage) {
+    this.usuarios=this.navParams.get("db");
+    this.userIndex=this.navParams.get("user");
+    this.storage.keys()
+      .then(keys => {
+        if (keys.some(k => k == 'usuarios')) {
+          this.storage.get('usuarios')
+            .then(usuarios => {
+              this.usuarios = JSON.parse(usuarios);
+              console.log("Yes");
+            });
+        }
+      });
   }
   viewProduct(n:any){
-    this.navCtrl.push(this.product,n)
+    this.navCtrl.push(this.product,{product:n, db: this.usuarios, user: this.userIndex})
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad BrowsePage');
+  }
+  viewCart(){
+    this.navCtrl.push(this.cart,{cart: this.usuarios[this.userIndex].carrito});
   }
 
 }

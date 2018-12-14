@@ -19,7 +19,7 @@ export class RegistroPage {
   correo = '';
   contra = '';
   telefono='';
-  carrito='';
+  carrito=[];
   usuarios = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {

@@ -7,15 +7,21 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>¡Hola {{nombre}}!</ion-title>
+    <ion-row>
+      <ion-title style="background-color: rgb(255, 169,135)">¡Hola {{usuarios[userIndex].nombre}}!</ion-title>
+      
+        <ion-icon name="md-cart" 
+        (click)="viewCart()"></ion-icon>
+      
+    </ion-row>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding style="background-color: rgb(247, 235,232)">
   <ion-list>
-    <ion-card *ngFor="let p of productos">
+    <ion-card *ngFor="let p of productos" style="background-color: rgb(233, 107,107)">
       <img src={{p.foto}} (click)="viewProduct(p)">
       <ion-card-content>
         <ion-card-title>

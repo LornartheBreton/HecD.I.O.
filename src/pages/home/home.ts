@@ -41,7 +41,7 @@ export class HomePage {
       });
       alerta.present();*/
       console.log(this.usuarios[index].correo);
-      this.navCtrl.push(this.browse,this.usuarios[index]);
+      this.navCtrl.push(this.browse,{user: index, db:this.usuarios});
     }
     else {
       const alerta = this.alert.create({
